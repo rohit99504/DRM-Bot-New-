@@ -22,11 +22,11 @@ class Config(object):
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
-    GROUPS = os.environ.get('GROUPS', '').split(',')
+    GROUPS = os.environ.get('GROUPS', '-1002075880942').split(',')
     for i in range(len(GROUPS)):
         GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH = os.environ.get("LOG_CH", "")
+    LOG_CH = os.environ.get("LOG_CH", "-1002059340064")
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
 logging.basicConfig(
